@@ -17,13 +17,13 @@ YatriGo is a fully featured, premium travel and accommodation booking platform d
    Navigate to the client directory and install frontend dependencies:
 
    ```bash
-   yarn install
+   npm install
    ```
 
    Similarly, navigate to the api directory and install backend dependencies:
 
    ```bash
-   yarn install
+   npm install
    ```
 
 3. **Environment Variables Configuration:**
@@ -54,38 +54,38 @@ YatriGo is a fully featured, premium travel and accommodation booking platform d
 
    - Open a terminal, navigate to the `client` directory, and run the following command to start the frontend:
      ```bash
-     yarn run dev
+      npm start
      ```
    - Open another terminal, navigate to the `api` directory, and run this command to start the backend server:
      ```bash
-     yarn start
+     npm start
      ```
 
 ## Features
 
 - **User Authentication & Google OAuth:** Secure sign-up, login, logout, and integrated Google Auth.
 
-  ![YatriGo Authentication UI](client/public/assets/auth.png)
+  
 
 - **Advanced Search Listings:** High-density, optimized multi-city search for accommodations and vehicle rentals.
 
-  ![YatriGo Search UI](client/public/assets/search.png)
+
 
 - **Detailed Accommodation & Booking Engine:** Seamless visual gallery, list of custom perks/amenities, and calendar-based booking widget.
 
-  ![YatriGo View Listings UI](client/public/assets/view.png)
+  
 
 - **Interactive Bookings Panel:** Overview of all booked places and cars with interactive trip detail cards.
 
-  ![YatriGo Booking Widget](client/public/assets/book.png)
+  
 
 - **Comprehensive Hosting Portal:** Hosts can easily add new properties, manage vehicle details, and upload photos directly.
 
-  ![YatriGo Hosting Panel](client/public/assets/manage.png)
+  
 
 - **Premium Responsive Design:** Stunning glassmorphism details, unified typography, and modern visual spacing adapted beautifully to all devices.
 
-  ![YatriGo Hero Presentation](client/public/assets/hero.png)
+  
 
 ## Technologies Used
 
