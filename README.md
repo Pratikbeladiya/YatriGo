@@ -1,99 +1,300 @@
-# YatriGo - Premium Travel Booking Platform
+# 🚀 YatriGo – Travel Stay & Car Rental Booking Platform
 
-## Overview
+<div align="center">
 
-YatriGo is a fully featured, premium travel and accommodation booking platform developed using the MERN stack (MongoDB, Express.js, React.js, Node.js). It provides a highly optimized, high-density user experience inspired by leading accommodation platforms, featuring robust hotel and car search capabilities, booking systems, hosting dashboards, and streamlined payment flows.
+![React](https://img.shields.io/badge/Frontend-React.js-blue?style=for-the-badge&logo=react)
+![Node.js](https://img.shields.io/badge/Backend-Node.js-green?style=for-the-badge&logo=node.js)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-darkgreen?style=for-the-badge&logo=mongodb)
+![Express](https://img.shields.io/badge/API-Express.js-black?style=for-the-badge&logo=express)
 
-## Getting Started
+### 🌍 Full Stack Travel & Car Rental Booking Web Application
 
-1. **Clone the Repository:**
+Book hotels, apartments, resorts, and rental cars across India with a modern and responsive platform.
 
-   ```bash
-   git clone https://github.com/Pratikbeladiya/YatriGo.git
-   ```
+</div>
 
-2. **Install dependencies:**
+---
 
-   Navigate to the client directory and install frontend dependencies:
+# 📌 Project Overview
 
-   ```bash
-   yarn install
-   ```
+**YatriGo** is a modern full-stack travel booking platform developed using the **MERN Stack**.
 
-   Similarly, navigate to the api directory and install backend dependencies:
+The platform allows users to:
 
-   ```bash
-   yarn install
-   ```
+- 🏨 Book hotels, resorts, and apartments
+- 🚗 Rent cars online
+- 👤 Manage profiles and bookings
+- 📍 Explore travel stays across India
+- 🔐 Use secure authentication system
+- 📱 Enjoy fully responsive UI for all devices
 
-3. **Environment Variables Configuration:**
+This project focuses on solving real-world travel booking problems with clean UI/UX and scalable backend architecture.
 
-   - Create a `.env` file in the `client` folder and add these variables:
+---
 
-     ```env
-     VITE_BASE_URL=http://localhost:4000
-     VITE_GOOGLE_CLIENT_ID=your_google_client_id
-     ```
+# ✨ Key Features
 
-   - Create a `.env` file in the `api` folder and add these variables:
+## 👤 Authentication & Security
+- User Signup/Login
+- JWT Authentication
+- Password Encryption
+- Secure API Handling
 
-     ```env
-     PORT=4000
-     DB_URL=your_mongodb_connection_url
-     JWT_SECRET=your_jwt_secret_key
-     JWT_EXPIRY=20d
-     COOKIE_TIME=7
-     SESSION_SECRET=your_session_secret_key
-     CLOUDINARY_NAME=your_cloudinary_cloud_name
-     CLOUDINARY_API_KEY=your_cloudinary_api_key
-     CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-     CLIENT_URL=http://localhost:5173
-     ```
+## 🏨 Property Booking System
+- Hotel & Apartment Listings
+- Property Details Page
+- Booking Management
+- Responsive Property Cards
 
-4. **Run the Project:**
+## 🚗 Car Rental System
+- Car Listings
+- Car Booking Features
+- Rental Management System
 
-   - Open a terminal, navigate to the `client` directory, and run the following command to start the frontend:
-     ```bash
-     yarn run dev
-     ```
-   - Open another terminal, navigate to the `api` directory, and run this command to start the backend server:
-     ```bash
-     yarn start
-     ```
+## 📊 User Dashboard
+- Manage Bookings
+- Edit Profile
+- Booking History
+- Account Management
 
-## Features
+## ⚡ Modern UI/UX
+- Fully Responsive Design
+- Mobile Friendly Interface
+- Material UI Components
+- Smooth Navigation
 
-- **User Authentication & Google OAuth:** Secure sign-up, login, logout, and integrated Google Auth.
+---
 
-  ![YatriGo Authentication UI](client/public/assets/auth.png)
+# 🛠️ Tech Stack
 
-- **Advanced Search Listings:** High-density, optimized multi-city search for accommodations and vehicle rentals.
+## Frontend
+- React.js
+- React Router DOM
+- Axios
+- Material UI
+- Vanilla CSS
 
-  ![YatriGo Search UI](client/public/assets/search.png)
+## Backend
+- Node.js
+- Express.js
 
-- **Detailed Accommodation & Booking Engine:** Seamless visual gallery, list of custom perks/amenities, and calendar-based booking widget.
+## Database
+- MongoDB
 
-  ![YatriGo View Listings UI](client/public/assets/view.png)
+## Authentication & Security
+- JWT Authentication
+- bcrypt.js
 
-- **Interactive Bookings Panel:** Overview of all booked places and cars with interactive trip detail cards.
+## Other Tools
+- Git & GitHub
+- REST APIs
+- Socket.io
 
-  ![YatriGo Booking Widget](client/public/assets/book.png)
+---
 
-- **Comprehensive Hosting Portal:** Hosts can easily add new properties, manage vehicle details, and upload photos directly.
+# 📂 Project Structure
 
-  ![YatriGo Hosting Panel](client/public/assets/manage.png)
+```bash
+YatriGo/
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   └── package.json
+│
+├── backend/
+│   ├── controllers/
+│   ├── routes/
+│   ├── models/
+│   ├── middleware/
+│   └── package.json
+│
+└── README.md
+```
 
-- **Premium Responsive Design:** Stunning glassmorphism details, unified typography, and modern visual spacing adapted beautifully to all devices.
+---
 
-  ![YatriGo Hero Presentation](client/public/assets/hero.png)
+# ⚙️ Installation & Setup
 
-## Technologies Used
+## 1️⃣ Clone Repository
 
-- **MongoDB:** Robust NoSQL database for flexible data persistence.
-- **Express.js & Node.js:** Scalable RESTful API development and backend server runtime.
-- **React.js:** Single Page Application (SPA) frontend with reactive state management.
-- **Tailwind CSS & Shadcn/UI:** Sleek, customizable modern interface building blocks.
-- **JSON Web Tokens (JWT):** Secure session validation and cookie-token extraction.
-- **Cloudinary:** Reliable, high-performance image uploads and storage.
-- **Google Console APIs:** Streamlined email-based client authorization.
+```bash
+git clone https://github.com/yourusername/YatriGo.git
+```
 
+---
+
+# 🖥️ Frontend Setup
+
+## Move to Frontend Folder
+
+```bash
+cd frontend
+```
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+## Run Frontend
+
+```bash
+npm start
+```
+
+Frontend will run on:
+
+```bash
+http://localhost:3000
+```
+
+---
+
+# 🔥 Backend Setup
+
+## Move to Backend Folder
+
+```bash
+cd backend
+```
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+## Run Backend Server
+
+```bash
+npm run dev
+```
+
+OR
+
+```bash
+npm start
+```
+
+Backend will run on:
+
+```bash
+http://localhost:5000
+```
+
+---
+
+# 🔐 Environment Variables
+
+Create a `.env` file inside backend folder and add:
+
+```env
+MONGO_URL=your_mongodb_connection
+JWT_SECRET=your_secret_key
+PORT=5000
+```
+
+---
+
+# 📷 Application Screenshots
+
+## 🏠 Home Page
+
+```md
+![Home Page](./screenshots/home.png)
+```
+
+---
+
+## 🔐 Login Page
+
+```md
+![Login Page](./screenshots/login.png)
+```
+
+---
+
+## 🏨 Hotel Booking Page
+
+```md
+![Hotel Booking](./screenshots/hotel-booking.png)
+```
+
+---
+
+## 🚗 Car Rental Page
+
+```md
+![Car Rental](./screenshots/car-rental.png)
+```
+
+---
+
+## 👤 User Dashboard
+
+```md
+![Dashboard](./screenshots/dashboard.png)
+```
+
+---
+
+
+
+# 🌐 Live Demo
+
+## Live Deploy Website 
+```md
+https://yatri-go.vercel.app/
+
+```
+
+---
+
+# 🎯 Future Improvements
+
+- Online Payment Gateway
+- Google Authentication
+- Real-time Booking Updates
+- AI Travel Recommendation
+- Admin Dashboard
+- Email Notifications
+
+---
+
+# 🤝 Contribution
+
+Contributions are welcome.
+
+Fork the repository and create a pull request.
+
+---
+
+# 📧 Contact
+
+## 👨‍💻 Pratik Beladiya
+
+- 📩 Email: beladiyapratik03@gmail.com
+- 💼 Portfolio:
+- 🌐 GitHub: https://github.com/Pratikbeladiya 
+
+---
+
+# ⭐ Show Your Support
+
+If you like this project:
+
+⭐ Star this repository  
+🔗 Fork this repository  
+⏩️ Share with others
+
+---
+
+<div align="center">
+
+##  “Burn the comfort and do limitless hustle.”
+
+Made with ❤️ by Pratik Beladiya
+
+</div>
