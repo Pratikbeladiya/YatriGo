@@ -16,9 +16,10 @@ export const useProvidePlaces = () => {
     const getPlaces = async () => {
         try {
             const { data } = await axiosInstance.get('/places');
-            setPlaces(data.places);
+            setPlaces(data && Array.isArray(data.places) ? data.places : []);
         } catch (error) {
             console.error('Failed to load places:', error);
+            setPlaces([]);
         } finally {
             setLoading(false);
         }
@@ -37,9 +38,10 @@ export const useProvidePlaces = () => {
             if (filters.guests) params.append('guests', filters.guests);
 
             const { data } = await axiosInstance.get(`/places/search/${key || 'undefined'}?${params.toString()}`);
-            setPlaces(data);
+            setPlaces(Array.isArray(data) ? data : []);
         } catch (error) {
             console.error('Failed to search places:', error);
+            setPlaces([]);
         } finally {
             setLoading(false);
         }

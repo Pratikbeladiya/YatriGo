@@ -16,9 +16,10 @@ export const useProvideCars = () => {
     const getCars = async () => {
         try {
             const { data } = await axiosInstance.get('/cars');
-            setCars(data.cars);
+            setCars(data && Array.isArray(data.cars) ? data.cars : []);
         } catch (error) {
             console.error('Failed to load cars:', error);
+            setCars([]);
         } finally {
             setLoading(false);
         }
@@ -38,9 +39,10 @@ export const useProvideCars = () => {
             if (filters.seatingCapacity) params.append('seatingCapacity', filters.seatingCapacity);
 
             const { data } = await axiosInstance.get(`/cars/search/${key || 'undefined'}?${params.toString()}`);
-            setCars(data);
+            setCars(Array.isArray(data) ? data : []);
         } catch (error) {
             console.error('Failed to search cars:', error);
+            setCars([]);
         } finally {
             setLoading(false);
         }
