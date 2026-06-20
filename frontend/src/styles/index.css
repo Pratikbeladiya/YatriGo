@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 15% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 15% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 15% 12%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 15% 12%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 220 14% 96%;
+    --accent-foreground: 222 15% 12%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71% 58%;
+
+    --radius: 0.875rem;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.01em;
+    line-height: 1.6;
+  }
+
+  h1 {
+    @apply font-display text-4xl font-bold tracking-tight leading-tight;
+  }
+  h2 {
+    @apply font-display text-2xl font-bold tracking-tight leading-snug;
+  }
+  h3 {
+    @apply font-display text-xl font-semibold tracking-tight;
+  }
+  h4, h5, h6 {
+    @apply font-display font-semibold tracking-tight;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+/* ======================== */
+/* GLOBAL COMPONENT STYLES  */
+/* ======================== */
+
+@layer components {
+
+  /* --- FORMS & INPUTS --- */
+  .input-field {
+    @apply w-full bg-white border border-gray-200 rounded-xl py-3 px-4 text-sm font-medium text-gray-800
+           placeholder-gray-400 transition-all duration-200
+           focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10;
+  }
+
+  .input-label {
+    @apply block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2;
+  }
+
+  .section-card {
+    @apply bg-white rounded-2xl border border-gray-100 shadow-sm p-8;
+  }
+
+  /* --- BUTTONS --- */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl
+           text-sm font-semibold text-white bg-rose-500
+           hover:bg-rose-600 active:scale-[0.98] shadow-sm shadow-rose-500/20
+           transition-all duration-200 cursor-pointer;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl
+           text-sm font-semibold text-gray-700 bg-white border border-gray-200
+           hover:bg-gray-50 active:scale-[0.98]
+           transition-all duration-200 cursor-pointer;
+  }
+  .btn-dark {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl
+           text-sm font-semibold text-white bg-gray-900
+           hover:bg-gray-800 active:scale-[0.98]
+           transition-all duration-200 cursor-pointer;
+  }
+  .btn-blue {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl
+           text-sm font-semibold text-white bg-blue-600
+           hover:bg-blue-700 active:scale-[0.98] shadow-sm shadow-blue-500/20
+           transition-all duration-200 cursor-pointer;
+  }
+
+  /* --- SECTION HEADERS --- */
+  .section-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-widest text-rose-500;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold text-gray-900 tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-sm font-medium text-gray-500;
+  }
+
+  /* --- TAGS & BADGES --- */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+  .badge-green {
+    @apply badge bg-emerald-50 text-emerald-700;
+  }
+  .badge-blue {
+    @apply badge bg-blue-50 text-blue-700;
+  }
+  .badge-rose {
+    @apply badge bg-rose-50 text-rose-600;
+  }
+
+  /* --- CARDS --- */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  /* --- PAGE HEADERS --- */
+  .page-header {
+    @apply mb-8;
+  }
+  .page-title {
+    @apply text-3xl font-bold text-gray-900 tracking-tight mb-1;
+  }
+  .page-subtitle {
+    @apply text-sm font-medium text-gray-500;
+  }
+}
+
+/* ======================== */
+/* UTILITY OVERRIDES        */
+/* ======================== */
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .font-display {
+    font-family: 'Outfit', 'Inter', sans-serif;
+  }
+}
+
+/* Hide scrollbars for clean UI */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+input, select, textarea {
+  @apply focus:outline-none transition-all duration-200;
+}
+
+button {
+  @apply transition-all duration-200;
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.glass {
+  @apply bg-white/80 backdrop-blur-md border border-white/20;
+}
+
+.premium-shadow {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* Smooth gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-rose-500 to-pink-600 bg-clip-text text-transparent;
+}
+
+/* Better selection */
+::selection {
+  background: rgba(245, 56, 93, 0.15);
+  color: #111;
+}
